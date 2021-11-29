@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Java8Start {
+
+   public static void main(String s[]){
+      System.out.println("Hello world");
+      
+      //take string array in list
+      
+      List<String> listS= Arrays.asList( "Hello" , "World" , "Dipika");
+      
+      //make names toUpperCase
+      
+      listS.stream().map(String :: toUpperCase).forEach(i -> System.out.println(i));
+      
+      
+      //sort list
+      
+      listS.stream().sorted().forEach(k -> System.out.println(k));
+      
+      //filter
+      System.out.println("After filter -- > ");
+      listS.stream().filter( s1 -> s1.startsWith("D")).forEach( l -> System.out.println(l));
+   }
+}
